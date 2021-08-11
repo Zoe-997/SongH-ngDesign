@@ -1,0 +1,105 @@
+.hidden {
+    display: none !important;
+}
+
+.placeholder(@rules) {
+    ::-webkit-input-placeholder {
+        @rules();
+    }
+
+    :-moz-placeholder {
+        @rules();
+    }
+
+    ::-moz-placeholder {
+        @rules();
+    }
+
+    :-ms-input-placeholder {
+        @rules();
+    }
+}
+
+.box-shadow(@arguments) {
+    box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    -webkit-box-shadow: @arguments;
+}
+
+.round-borders (@radius) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+}
+
+.inner-round-borders(@arguments) {
+    border-radius: @arguments;
+    -moz-border-radius: @arguments;
+    -webkit-border-radius: @arguments;
+}
+
+.hidden-visibility {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.button-close {
+    background-image: none;
+    -moz-box-sizing: content-box;
+    border: 0;
+    box-shadow: none;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    text-shadow: none;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: none;
+    position: absolute;
+}
+
+.center-transform {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.transform(@arguments) {
+    -webkit-transform: rotate(@arguments);
+    -ms-transform: rotate(@arguments);
+    -o-transform: rotate(@arguments);
+    transform: rotate(@arguments);
+}
+.late3D-transform(@arguments) {
+    -webkit-transform: translate3d(@arguments);
+    -ms-transform: translate3d(@arguments);
+    -o-transform: translate3d(@arguments);
+    transform: translate3d(@arguments);
+}
+
+.transition(@arguments) {
+    transition: @arguments;
+    -moz-transition: @arguments;
+    -webkit-transition: @arguments;
+    -o-transition: @arguments;
+}
+
+.dflex {
+    display: -webkit-box;
+    display: -ms-flex-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+
+    &:before,
+    &:after {
+        display: none;
+    }
+}
