@@ -1,9 +1,9 @@
 jQuery(document).ready(function($) {
-	// call layout
-	$("body #header").load("header.html");
-	$("body #footer").load("footer.html");
+    // call layout
+    $("body #header").load("header.html");
+    $("body #footer").load("footer.html");
 
-	// call slick slide
+    // call slick slide
     $(".autoplay").each(function() {
         $(this).slick($(this).data());
     });
@@ -107,30 +107,30 @@ jQuery(document).ready(function($) {
                 spinner.find("input").val(newVal);
                 spinner.find("input").trigger("change");
             });
-		});
-	});
+        });
+    });
     //end
 
-	// tabs
-	$(function() {
-		$(".magic-tabs  ul li").on('click', function() {
-			var container_tab = $(this).closest('.cover-tab');
-			container_tab.find('.tab-content .content').removeClass('active-tab-content');
-			$(this).siblings().removeClass("action-tab-btn");
-			$(this).addClass('action-tab-btn');
-			container_tab.find('.tab-content .content').eq($(this).index()).addClass('active-tab-content');
-		});	
-	});
-	// end tabs
+    // tabs
+    $(function() {
+        $(".magic-tabs  ul li").on('click', function() {
+            var container_tab = $(this).closest('.cover-tab');
+            container_tab.find('.tab-content .content').removeClass('active-tab-content');
+            $(this).siblings().removeClass("action-tab-btn");
+            $(this).addClass('action-tab-btn');
+            container_tab.find('.tab-content .content').eq($(this).index()).addClass('active-tab-content');
+        });
+    });
+    // end tabs
 
-	// show pass
-	(function($) {
-		let x = document.getElementById("pass");
-		if (x.type === "password") {
-			x.type = "text";
-		} else {
-			x.type = "password";
-		}
-	});
-	// end show pass
+    // show pass
+    (function($) {
+        let x = document.getElementById("pass");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    });
+    // end show pass
 });
