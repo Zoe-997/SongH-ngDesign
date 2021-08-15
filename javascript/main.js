@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 	// call layout
-	$("body #header").load("header.html");
-	$("body #footer").load("footer.html");
+	$("#header").load("header.html");
+	$("#footer").load("footer.html");
 
 	// call slick slide
     $(".autoplay").each(function() {
