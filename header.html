@@ -1,1 +1,159 @@
-<div>header</div>
+<div class="header-top">
+	<div class="container d-flex align-items-center justify-content-between">
+		<div class="header-top-left">
+			<ul class="list-link">
+				<li><a href="#">Hướng dẫn khách hàng</a></li>
+				<li><a href="#">Hệ thống Bệnh viện Đa khoa Sông Thương</a></li>
+			</ul>
+		</div>
+		<div class="header-top-left">
+			<div class="account">
+				<a href="#"><img src="./images/home/ico_user.png" alt="" /> Tài khoản</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--  -->
+<div class="header-center">
+	<div class="container d-flex align-items-center justify-content-between">
+		<a href="#" class="logo">
+			<img src="./images/home/logo.svg" alt="">
+		</a>
+		<form action="#" method="post" class="search-wrapper">
+			<button class="btn btn-search"><img src="./images/home/ico-search.png" alt=""/></button>
+			<input type="text" placeholder="Tìm kiếm bài viết, trợ giúp...">
+		</form>
+		<div class="advise-wrapper">
+			<div class="hot-line-wrapper">
+				<img src="./images/home/hotline.png" alt="">
+				<div class="content">
+					<span>TỔNG ĐÀI</span>
+					<a href="tel:0946 233 789" class="phone">0946 233 789</a>
+				</div>
+			</div>
+			<div class="hot-line-wrapper">
+				<img src="./images/home/user.png" alt="">
+				<div class="content">
+					<span>Tư vấn</span>
+					<a href="#" class="phone">Hỏi bác sĩ online</a>
+				</div>
+			</div>
+			<button class="btn-registration">ĐĂNG KÍ KHÁM</button>
+		</div>
+	</div>
+</div>
+<!--  -->
+<div class="header-bottom">
+	<div class="container">
+		<ul class="main-menu">
+			<li>
+				<a href="#">Giới thiệu <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+			</li> 
+			<li>
+				<a href="#">Đội ngũ bác sĩ</a>
+			</li>
+			<li>
+				<a href="#">Dịch vụ y tế <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+			</li>
+			<li>
+				<a href="#">Gian hàng trực tuyến</a>
+			</li>
+			<li>
+				<a href="#">Tin tức, hướng dẫn và các bài viết <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+			</li>
+			<li>
+				<a href="#">Thư viện</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<form action="#" method="post" class="modal-registration">
+	<div class="modal-header">
+		<img src="./images/home/Frame.png" alt=""/>
+		<button class="btn-close"><img src="./images/home/close.png" alt=""/></button>
+	</div>
+	<div class="modal-body">
+		<div class="title-wrapper">
+			<h4 class="title">Đăng ký khám và tư vấn tại Đa khoa Sông Thương</h4>
+			<p class="sub-title">Vui lòng để lại thông tin và nhu cầu của quý khách. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.</p>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<label for="">Họ và tên <sup>*</sup></label>
+				<input type="text" class="field" placeholder="Nhập họ và tên">
+			</div>
+			<div class="col-6">
+				<label for="">Số điện thoại <sup>*</sup></label>
+				<input type="text" class="field" placeholder="Nhập số điện thoại">
+			</div>
+			<div class="col-6">
+				<label for="">Email</label>
+				<input type="text" class="field" placeholder="Nhập email">
+			</div>
+			<div class="col-6">
+				<label for="">Ngày khám</label>
+				<div class="field-date-wrapper field">
+					<p class="result">Chọn ngày khám bệnh</p>
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+					<input type="date" class="field-date" placeholder="Nhập email">
+				</div>
+			</div>
+			<div class="col-12">
+				<label for="">Bạn có muốn khám bác sĩ nào không?</label>
+				<div class="field-doctor-wrapper">
+					<i class="fa fa-angle-down" aria-hidden="true"></i>
+					<input type="text" class="field-doctor field" placeholder="Chọn bác sĩ khám bệnh">
+					<div id="list-results"></div>
+				</div>
+			</div>
+			<div class="col-12">
+				<label for="">Nhu cầu khám bệnh</label>
+				<textarea name="" id="" class="field" placeholder="Bạn đang gặp vấn đề về sức khỏe như thế nào?"></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn-submit">Gửi yêu cầu khám bệnh</a>
+	</div>
+</form>
+<div class="modal-registration">
+	<div class="modal-header">
+		<img src="./images/home/Frame.png" alt=""/>
+		<button class="btn-close"><img src="./images/home/close.png" alt=""/></button>
+	</div>
+	<div class="modal-body">
+		<div class="title-wrapper">
+			<h4 class="title"><img src="./images/home/check.png" alt=""/>Đăng ký thành công</h4>
+			<p class="sub-title">Cảm ơn quý khách! Chúng tôi sẽ gửi thông tin sức khỏe của bạn tới cho bác sĩ và liên hệ lại với quý khách theo số điện thoại <a href="tel:0946233789">0946 233 789</a> để xác nhận lịch hẹn trong thời gian sớm nhất.</p> 
+		</div>
+		<div class="table-title">Thông tin khám bệnh</div>
+		<table class="table">
+			<tbody>
+				<tr>
+					<td>Họ và tên</td>
+					<td><strong>Đào Anh Lâm</strong></td>
+				</tr>
+				<tr>
+					<td>Số điện thoại</td>
+					<td><strong>0946 233 789</strong></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><strong>lamda@vdcs.com.vn</strong></td>
+				</tr>
+				<tr>
+					<td>Ngày khám</td>
+					<td><strong>27 tháng 4, 2021</strong></td>
+				</tr>
+				<tr>
+					<td>Bác sĩ khám</td>
+					<td><strong>Bác sĩ Nguyễn Đức Đạt</strong></td>
+				</tr>
+				<tr>
+					<td>Nhu cầu khám bệnh</td>
+					<td><strong>Tôi đang đau 2 răng số 8, cần bác sĩ khám ngay.</strong></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

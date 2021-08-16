@@ -23,9 +23,47 @@
     <link rel="stylesheet" href="./library/slick/slick.css" />
     <!-- main style -->
     <link rel="stylesheet" href="./style/home/_home.css">
+	<!-- Loading -->
+	<style type="text/css">
+		.preloading{
+			overflow: hidden;
+		}
+		.loading{
+			position: fixed;
+			background-color: black;
+			top: 0;
+			left: 0;
+			opacity: 1; 
+			width: 100%;
+			height: 100%;
+			z-index: 1000000;
+		}
+		.loading .img{
+			width: 100%;
+			width: auto;
+			opacity: 1; 
+			position: absolute;
+			top: 45%;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		#footer .home-page {
+			display: none;
+		}
+	</style>
 </head>
 
-<body>
+<body class="preloading has-modal">
+	<!-- Loading -->
+	<div class="loading">
+		<svg width="50" height="50" viewBox="0 0 50 50" class="img">
+			<path fill="white" d="M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z">
+				<animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.5s" repeatCount="indefinite" />
+			</path>
+		</svg>
+	</div>
+	<!-- End Loading -->
+
     <!-- Header -->
     <header id="header" class="header fixed-main-menu">
 		<!-- load content from header.html -->
@@ -427,7 +465,7 @@
 						<h2 class="title">Trang thiết bị tiên tiến</h3>
 						<p class="sub-title">Sở hữu không gian khám chữa bệnh văn minh, sang trọng, hiện đại, chú trọng đầu tư đồng bộ hệ thống trang thiết bị hiện đại, hỗ trợ hiệu quả cho việc chẩn đoán và điều trị.</p>
 					</div>
-					<ul class="dropdown-list list-support-fiter dropdown">
+					<ul class="dropdown-list accordion">
 						<li>
 							<div class="show-option d-flex align-items-center justify-content-between">
 								<div class="name-option">Phòng mổ Hybrid hiện đại</div>
@@ -1018,7 +1056,9 @@
 <!-- custom js -->
 <script ttype="text/javascript">
     jQuery(document).ready(function($) {
-
+		// Loading
+		$('body').removeClass('preloading');
+		$('.loading').delay(1000).fadeOut('fast');
 	})
 </script>
 </html>

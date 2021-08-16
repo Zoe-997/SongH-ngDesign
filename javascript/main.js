@@ -45,8 +45,14 @@ jQuery(document).ready(function($) {
     $(function() {
         $('.accordion .show-option').click(function(event) {
             event.preventDefault();
-            $(this).parent().find('.fretboard').slideUp();
-            $(this).parent().find('.fretboard').slideToggle();
+			$(this).parent().addClass('active');
+			$(this).parent().siblings().removeClass('active');
+			$(this).parent().siblings().find('.fretboard').slideUp();
+			$(this).parent().find('.fretboard').slideToggle();
+			$(this).parent().siblings().find('.show').removeClass('active').text('+');
+			($(this).parent().find('.show').text() === '+') ? 
+			($(this).parent().find('.show').removeClass('active').text('-')) : 
+			($(this).parent().find('.show').addClass('active').text('+'))
         });
     });
     // end Effect accordion
@@ -122,6 +128,72 @@ jQuery(document).ready(function($) {
 		});	
 	});
 	// end tabs
+
+	// modal form registor
+	$(function() {
+		// choose doctor
+		let fakeData = [
+			{"name": "Bác sĩ Nguyễn Tuấn Anh", "job": "Chuyên khoa Gây mê - Điều trị đau"},
+			{"name": "Bác sĩ Nguyễn Duy Tân", "job": "Chuyên khoa nhi"},
+			{"name": "Bác sĩ Nguyễn Tuấn Đạt", "job": "Chuyên khoa mắt"},
+			{"name": "Bác sĩ Ngô Tiến Mạnh", "job": "Chuyên khoa cơ xương khớp"},
+			{"name": "Bác sĩ Bùi Văn Tiến", "job": "Chuyên khoa răng hàm mặt"},
+			{"name": "Bác sĩ Đinh Thùy Nga", "job": "Chuyên tai mũi họng"},
+			{"name": "Bác sĩ Phan Thị Linh", "job": "Chuyên khoa Gây trĩ"},
+			{"name": "Bác sĩ Phạm văn Cần", "job": "Chuyên khoa Gây phổi"},
+			{"name": "Bác sĩ Nguyễn Tuấn Huy", "job": "Chuyên khoa Gây gan"}
+		];
+
+		function showVal(fakeData) {
+			let listVal = fakeData.map(item => (`
+				<div class="item">
+					<p class="name">${item.name}</p>
+					<span class="job"> - ${item.job}</span>
+				</div>
+			`))
+			$('#list-results').html(listVal);
+		}
+		showVal(fakeData);
+
+		$(".field-doctor").keyup(function(){
+			let val = $(this).val().trim().toLowerCase();
+			if(val === '') {
+				showVal(fakeData);
+				return;
+			}
+			let fakeDataChange = [];
+			fakeData.forEach(item => {
+				if(item.name.toLowerCase().indexOf(val) >= 0 || item.job.toLowerCase().indexOf(val) >= 0) {
+					fakeDataChange.push(item);
+				}
+			})
+			showVal(fakeDataChange);
+		});
+
+		$('body').on('click', '#list-results .item',function() {
+			let text = $(this).children('.name').text() + $(this).children('.job').text();
+			$(".field-doctor").val(text);
+			console.log(text);
+		});
+
+		// choose date
+		let today = new Date();
+		let dd = today.getDate();
+		let mm = today.getMonth()+1;
+		let yyyy = today.getFullYear();
+		if(dd<10) {
+			dd='0'+dd;
+		} if(mm<10) {
+			mm='0'+mm;
+		} 
+		today = yyyy+'-'+mm+'-'+dd;
+		$(".field-date").attr("min", today);
+		$(".field-date").change(function() {
+			$(this).parent().find('.result').text($(this).val());
+			console.log($(this).text());
+		});
+	});
+	// end modal form registor
 
 	// show pass
 	(function($) {
