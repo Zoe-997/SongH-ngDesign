@@ -62,6 +62,12 @@
 			font-size: 14px;
 			line-height: 24px;
 			color: @text_color;
+
+			i {
+				margin-left:5px;
+				font-size: 16px;
+				font-weight: 800;
+			}
 		}
 
 		li {
@@ -70,6 +76,50 @@
 			&:hover {
 				a {
 					color: @base_color;
+				}
+				
+				.chile-menu {
+					top: 100%;
+					transition: all 0.3s ease-in;
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			.chile-menu {
+				min-width: 100%;
+				position: absolute;
+				background: #FFFFFF;
+				box-shadow: 0px 1px 3px rgba(19, 10, 46, 0.13);
+				border-radius: 4px;
+				left: 0;
+				top: 120%;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0s;
+				padding: 10px 0;
+				z-index: 1;
+
+				li {
+					display: block;
+
+					a {
+						display: block;
+						height: 32px;
+						line-height: 32px;
+						background: @white;
+						font-style: normal;
+						font-weight: normal;
+						font-size: 14px;
+						color: @text_color;
+						padding: 0 15px;
+						white-space: nowrap;
+
+						&:hover {
+							background: @base_color;
+							color: white;
+						}
+					}
 				}
 			}
 		}
@@ -204,6 +254,7 @@
 	}
 }
 .modal-registration {
+	display: none;
 	width: 700px;
 	position: fixed;
 	top: 50%;

@@ -208,11 +208,58 @@ html {
   line-height: 24px;
   color: #091D3E;
 }
+.header-bottom .main-menu a i {
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 800;
+}
 .header-bottom .main-menu li {
   position: relative;
 }
 .header-bottom .main-menu li:hover a {
   color: #0092FF;
+}
+.header-bottom .main-menu li:hover .chile-menu {
+  top: 100%;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  opacity: 1;
+  visibility: visible;
+}
+.header-bottom .main-menu li .chile-menu {
+  min-width: 100%;
+  position: absolute;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 3px rgba(19, 10, 46, 0.13);
+          box-shadow: 0px 1px 3px rgba(19, 10, 46, 0.13);
+  border-radius: 4px;
+  left: 0;
+  top: 120%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  padding: 10px 0;
+  z-index: 1;
+}
+.header-bottom .main-menu li .chile-menu li {
+  display: block;
+}
+.header-bottom .main-menu li .chile-menu li a {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  background: '#ffffff';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #091D3E;
+  padding: 0 15px;
+  white-space: nowrap;
+}
+.header-bottom .main-menu li .chile-menu li a:hover {
+  background: #0092FF;
+  color: white;
 }
 .header-center {
   padding: 20px 0;
@@ -375,6 +422,7 @@ html {
   color: #0092FF;
 }
 .modal-registration {
+  display: none;
   width: 700px;
   position: fixed;
   top: 50%;
