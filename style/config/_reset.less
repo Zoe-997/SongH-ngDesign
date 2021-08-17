@@ -9,18 +9,25 @@
 	}
 }
 
-button,
-a {
-	border: none;
-	.transition(all .3s ease-in);
-	text-decoration: none;
-	cursor: pointer;
-
-	&:focus,
-	&:hover {
-		text-decoration: none;
-		outline: none;
+body {
+	.btn,
+	input,
+	select,
+	textarea,
+	button,
+	a {
 		border: none;
+		.transition(all .3s ease-in);
+		text-decoration: none;
+		cursor: pointer;
+	
+		&:focus,
+		&:hover {
+			text-decoration: none;
+			outline: none;
+			border: none;
+			box-shadow: none;
+		}
 	}
 }
 

@@ -2,6 +2,7 @@ jQuery(document).ready(function($) {
 	// call layout
 	$("#header").load("header.html");
 	$("#footer").load("footer.html");
+	$("#modal").load("modal.html");
 
 	// call slick slide
     $(".autoplay").each(function() {

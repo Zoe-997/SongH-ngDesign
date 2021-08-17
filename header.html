@@ -90,7 +90,7 @@
 		</ul>
 	</div>
 </div>
-<form action="#" method="post" class="modal-registration">
+<form action="#" method="post" class="modal-registration modal-custom">
 	<div class="modal-header">
 		<img src="./images/home/Frame.png" alt=""/>
 		<button class="btn-close"><img src="./images/home/close.png" alt=""/></button>
@@ -139,7 +139,8 @@
 		<a href="#" class="btn-submit">Gửi yêu cầu khám bệnh</a>
 	</div>
 </form>
-<div class="modal-registration">
+<!-- modal đặt lịch -->
+<div class="modal-registration modal-custom">
 	<div class="modal-header">
 		<img src="./images/home/Frame.png" alt=""/>
 		<button class="btn-close"><img src="./images/home/close.png" alt=""/></button>
@@ -178,5 +179,43 @@
 				</tr>
 			</tbody>
 		</table>
+	</div>
+</div>
+<!-- modal login -->
+<div class="modal-login modal-custom">
+	<div class="modal-header">
+		<button class="btn-close"><img src="./images/home/close.png" alt=""/></button>
+	</div>
+	<div class="modal-body">
+		<div class="title-wrapper">
+			<h4 class="title">Đăng nhập để gửi câu hỏi</h4>
+			<p class="sub-title">Bạn chưa có Tài khoản? Vui lòng đăng ký Tài khoản mới <a href="tel:0946233789">tại đây</a></p> 
+		</div>
+		<form action="#" method="post" class="form-login">
+			<input type="email" placeholder="Email" class="field">
+			<input type="password" placeholder="Mật khẩu" class="field">
+			<div class="field-group">
+				<div class="check-box">
+					<input type="checkbox" name="saveme" id="saveme">
+					<label for="saveme">Lưu thông tin đăng nhập</label>
+				</div>
+				<a href="#" class="forgot-password">Lấy lại mật khẩu</a>
+			</div>
+			<button class="btn-login btn-block">Đăng nhập</button>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<div class="line"><span>Hoặc</span></div>
+		<div class="social-login-group">
+			<a href="#" class="facebook btn-social-login">
+				<img src="./images/home/facebook.png" alt="Facebook"/>
+				<span>Facebook</span>
+			</a>
+			<a href="#" class="google btn-social-login">
+				<img src="./images/home/google.png" alt="Google"/>
+				<span>Google</span>
+			</a>
+		</div>
+		<a href="#" class="anonymus">Gửi câu hỏi ẩn anh</a>
 	</div>
 </div>
