@@ -38,7 +38,7 @@
 					<a href="#" class="phone">Hỏi bác sĩ online</a>
 				</div>
 			</div>
-			<button class="btn-registration">ĐĂNG KÍ KHÁM</button>
+			<button class="btn-registration btn-modal" data-modal="form-registration">ĐĂNG KÍ KHÁM</button>
 		</div>
 	</div>
 </div>
@@ -90,10 +90,10 @@
 		</ul>
 	</div>
 </div>
-<form action="#" method="post" class="modal-registration modal-custom">
+<form action="#" method="post" class="modal-registration modal-custom" id="form-registration">
 	<div class="modal-header">
 		<img src="./images/home/Frame.png" alt=""/>
-		<button class="btn-close"><img src="./images/home/close.png" alt=""/></button>
+		<button class="btn-close btn-modal" data-modal="form-registration"><img src="./images/home/close.png" alt=""/></button>
 	</div>
 	<div class="modal-body">
 		<div class="title-wrapper">
@@ -136,14 +136,14 @@
 		</div>
 	</div>
 	<div class="modal-footer">
-		<a href="#" class="btn-submit">Gửi yêu cầu khám bệnh</a>
+		<button href="#" class="btn-submit btn-modal" data-modal="registration-success">Gửi yêu cầu khám bệnh</button>
 	</div>
 </form>
 <!-- modal đặt lịch -->
-<div class="modal-registration modal-custom">
+<div class="modal-registration modal-custom" id="registration-success">
 	<div class="modal-header">
 		<img src="./images/home/Frame.png" alt=""/>
-		<button class="btn-close"><img src="./images/home/close.png" alt=""/></button>
+		<button class="btn-close btn-modal" data-modal="registration-success"><img src="./images/home/close.png" alt=""/></button>
 	</div>
 	<div class="modal-body">
 		<div class="title-wrapper">

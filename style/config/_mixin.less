@@ -132,3 +132,33 @@
 		}
 	}
 }
+
+@keyframes modalIn {
+	from {
+		margin-top: 100px;
+		opacity: 0;
+	}
+	to {
+		margin-top: 0;
+		opacity: 1;
+	}
+}
+
+.modal-open {
+	animation: modalIn 1s forwards;
+}
+
+@keyframes modalOut {
+	from {
+		margin-top: 0;
+		opacity: 1;
+	}
+	to {
+		margin-top: 100px;
+		opacity: 0;
+	}
+}
+
+.modal-close {
+	animation: modalOut 1s forwards;
+}

@@ -49,11 +49,9 @@ jQuery(document).ready(function($) {
 			$(this).parent().addClass('active');
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().siblings().find('.fretboard').slideUp();
-			$(this).parent().find('.fretboard').slideToggle();
+			$(this).parent().find('.fretboard').slideDown();
 			$(this).parent().siblings().find('.show').removeClass('active').text('+');
-			($(this).parent().find('.show').text() === '+') ? 
-			($(this).parent().find('.show').removeClass('active').text('-')) : 
-			($(this).parent().find('.show').addClass('active').text('+'))
+			($(this).parent().find('.show').text() === '+') ? ($(this).parent().find('.show').removeClass('active').text('-')) : ($(this).parent().find('.show').addClass('active').text('+'));
         });
     });
     // end Effect accordion
@@ -83,6 +81,31 @@ jQuery(document).ready(function($) {
         });
     })($);
     // end Effect drop down
+
+	// Effect modal
+    (function($) {
+		$('body').on('click', '.btn-modal',function(event) {
+			event.preventDefault();
+			let modalName = $(this).data('modal');
+			let modal = $('body').find(`#${modalName}`);
+			let allModal = $('body').find(`.modal-custom`);
+			if(!modal.hasClass('modal-open')) {
+				allModal.each(function() {
+					$(this).removeClass(['modal-close', 'modal-open']).hide();
+				});
+				modal.show().addClass('modal-open');
+				$('body').addClass('has-modal');
+			} else {
+				modal.addClass('modal-close');
+				$('body').removeClass('has-modal');
+				setTimeout(function(){ 
+					modal.hide();
+					modal.removeClass(['modal-close', 'modal-open']);
+				}, 1000);
+			}
+		});
+    })($);
+    // end Effect modal
 
     // spinner quantity
     (function($) {
