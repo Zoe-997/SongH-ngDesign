@@ -2932,6 +2932,9 @@ body.has-modal:after {
   color: #091D3E;
   margin-top: 10px;
 }
+.detail-page {
+  margin-bottom: 60px;
+}
 .detail-page .banner-top {
   overflow: hidden;
 }
@@ -3037,6 +3040,7 @@ body.has-modal:after {
   font-weight: bold;
   font-size: 40px;
   line-height: 48px;
+  margin-top: 15px;
 }
 .detail-page .side-bar .form-registration {
   background: #FFFFFF;
@@ -3089,6 +3093,7 @@ body.has-modal:after {
   line-height: 17px;
   color: #091D3E;
   width: 100%;
+  padding: 0 12px;
 }
 .detail-page .side-bar .form-registration .field::-webkit-input-placeholder {
   color: #858FA0;
@@ -3269,4 +3274,232 @@ body.has-modal:after {
   text-align: center;
   color: #0092FF;
   margin-bottom: 25px;
+}
+.detail-page .col-main .img-main {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.detail-page .col-main h3.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  margin-bottom: 35px;
+}
+.detail-page .col-main .answer-doctor,
+.detail-page .col-main .question-user {
+  font-size: 16px;
+  line-height: 25px;
+}
+.detail-page .col-main .question-user {
+  font-style: normal;
+  font-weight: normal;
+  color: #091D3E;
+  margin-bottom: 30px;
+}
+.detail-page .col-main .question-user .user-name {
+  font-style: normal;
+  font-weight: normal;
+  font-weight: bold;
+  margin-top: 35px;
+}
+.detail-page .col-main .answer-doctor {
+  font-style: normal;
+  font-weight: normal;
+  color: #091D3E;
+  margin-bottom: 30px;
+}
+.detail-page .col-main .answer-doctor a {
+  color: #091D3E;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #43D5CB;
+          text-decoration-color: #43D5CB;
+}
+.detail-page .col-main .answer-doctor ul {
+  list-style: disc;
+  padding-left: 35px;
+}
+.detail-page .col-main .related-post {
+  border-left: 2px solid #858FA0;
+  color: #091D3E;
+  padding-left: 35px;
+  margin-bottom: 25px;
+}
+.detail-page .col-main .related-post li {
+  position: relative;
+}
+.detail-page .col-main .related-post li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.detail-page .col-main .related-post li::before {
+  content: "";
+  background: #858FA0;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -15px;
+  border-radius: 50%;
+}
+.detail-page .col-main .related-post a {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #0092FF;
+}
+.detail-page .col-main .sinature {
+  margin-bottom: 25px;
+}
+.detail-page .col-main .sinature a {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #091D3E;
+}
+.detail-page .col-main .post-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 0 30px;
+  border-bottom: 1px solid #E9E9EC;
+  border-top: 1px solid #E9E9EC;
+  margin-bottom: 30px;
+}
+.detail-page .col-main .post-footer .left a {
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #E9E9EC;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  margin-right: 12px;
+  color: #091D3E;
+}
+.detail-page .col-main .post-footer .left a:hover {
+  border: 1px solid #0092FF;
+}
+.detail-page .col-main .post-footer .left .like {
+  border: 1px solid #0092FF;
+}
+.detail-page .col-main .post-footer .left p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  margin-right: 12px;
+}
+.detail-page .col-main .post-footer .right .list-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.detail-page .col-main .post-footer .right .list-social li {
+  margin-left: 12px;
+}
+.detail-page .col-main .post-footer .right .list-social a {
+  display: block;
+}
+.detail-page .col-main .post-footer .right p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+.detail-page .col-main .related-question h3.title {
+  margin-bottom: 20px;
+}
+.detail-page .col-main .related-question .category {
+  margin-bottom: 25px;
+}
+.detail-page .col-main .related-question .category span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 25px;
+  color: #858FA0;
+}
+.detail-page .col-main .related-question .category .list-category li {
+  margin-left: 8px;
+}
+.detail-page .col-main .related-question .category .list-category a {
+  height: 31px;
+  line-height: 31px;
+  background: #F7F7F7;
+  border-radius: 24px;
+  display: inline-block;
+  padding: 0 12px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #091D3E;
+}
+.detail-page .col-main .related-question .category .list-category a:hover {
+  background: #091D3E;
+  color: #F7F7F7;
+}
+.detail-page .col-main .list-related-question .question-short-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.detail-page .col-main .list-related-question .question-short-content:not(:last-child) {
+  padding-bottom: 25px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #E9E9EC;
+}
+.detail-page .col-main .list-related-question .img {
+  width: 30%;
+  margin-left: 30px;
+}
+.detail-page .col-main .list-related-question .img img {
+  width: 100%;
+}
+.detail-page .col-main .list-related-question .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.detail-page .col-main .list-related-question .content .name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  color: #091D3E;
+  margin-bottom: 10px;
+}
+.detail-page .col-main .list-related-question .content .name:hover {
+  color: #0092FF;
+}
+.detail-page .col-main .list-related-question .content .short-desc {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #858FA0;
 }
